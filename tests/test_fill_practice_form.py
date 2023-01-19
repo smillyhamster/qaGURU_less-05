@@ -18,7 +18,7 @@ def test_fill_practice_form():
     browser.element('#subjectsInput').click().type('English').press_enter().type('Computer Science').press_enter()
     browser.element('[for=hobbies-checkbox-1]').click()
     browser.element('[for=hobbies-checkbox-2]').click()
-    browser.element('#uploadPicture').send_keys(os.path.abspath(os.path.join('images', 'img_for_upload.png')))
+    browser.element('#uploadPicture').send_keys(os.path.abspath((os.path.dirname(__file__) + '\images\img_for_upload.png')))
     browser.element('#currentAddress').should(be.blank).type('Some deep place in Russia')
     browser.element('#react-select-3-input').type('Uttar Pradesh').press_enter()
     browser.element('#react-select-4-input').type('Lucknow').press_enter()
